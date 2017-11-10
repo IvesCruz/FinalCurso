@@ -108,11 +108,11 @@
                     </div>
                     
                     <div class="input-field col s12">
-                        <select id="mySelect">
-                            <option disabled selected>Escolha sua opção</option>
-                            <option>Poliestireno / Isopor</option>
-                            <option>Poliuretano</option>
-                            <option>Outros</option>
+                        <select id="mySelect" onchange="calcular()">
+                            <option value="" disabled selected>Escolha sua opção</option>
+                            <option value="1">Poliestireno / Isopor</option>
+                            <option value="2">Poliuretano</option>
+                            <option value="3">Outros</option>
                         </select>
                         <label>Tipo de Isolamento</label>
                     </div>
@@ -148,11 +148,12 @@
                     </div>
 
                     <div class="input-field col sm 12">
-                        <button type="submit" class="waves-effect waves-light btn">AVANÇAR</button>
+                        <button type="submit" class="waves-effect waves-light btn" onclick="calcular()">AVANÇAR</button>
                     </div>
                 </form>
             </div>
         </form>
+
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/validacaoPrimeira.js"></script>
@@ -165,5 +166,5 @@
         $('tabs').tabs({});
   });
 </script>
-</body>
+    </body>
 </html>

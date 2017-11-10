@@ -34,7 +34,7 @@ $(document).ready(function() {
 });
 
 function calcular(){
-
+    
     //Primeira Página
     //var comprimento = document.getElementById("Comprimento").value 
     //var largura = document.getElementById("Largura").value
@@ -59,11 +59,33 @@ function calcular(){
     window.localStorage['tx_TempExterna'] = tempExterna;
     window.localStorage['tx_Frequencia'] = frequencia;
 
+
     volume = (comprimento * largura) * altura;
     area = comprimento * largura;
+    var fatorTabela1 = altura * largura
+    diferencialTemperatura = (tempExterna - (-tempInterna));
+
+    $('.mySelect option:selected').text()
+    valorSelect = $('#mySelect').val()
+
+    if(diferencialTemperatura >= 1 && diferencialTemperatura < 10){
+        if(valorSelect == 1 && espessuraIsolamento == 50){
+            var result = 14;
+            fatorTabela1 = fatorTabela1 * result
+            console.log(fatorTabela1)
+        }
+    }
+
+    //fatorTabela1 = altura * largura * 
 
     $('#areaDoPiso').val(area);
     $('#volume').val(volume);
+
+    var x = [
+                1:{
+                    1:[{50: 14},{75: 9.5},{100: 7.2},{150: 4.8},{200:3.6}],
+                    2:[{50: 9.5},{75: 6.4},{100: 4.8}]}
+            ]
 }
 
 
