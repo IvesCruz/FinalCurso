@@ -66,6 +66,10 @@ function validacao(){
 			alert("Preencha o campo TEMPERATURA EXTERNA.")
 			document.dados.tx_TempExterna.focus();
 			return false;
+		}else if(document.dados.tx_TempExterna.value > 40){
+			alert("Temperatura externa não suportada. Por favor, corrigir.")
+			document.dados.tx_TempExterna.focus();
+			return false;
 		}
 
 		//Frequência

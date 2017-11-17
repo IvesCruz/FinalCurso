@@ -5,20 +5,8 @@ window.onload = function(){
     ano = data.getFullYear();
     var str_data = dia + '/' + (mes+1) + '/' + ano;
     document.getElementById("DataAtual").value = str_data
-
-
- $.getJSON( "./produtos.json", function(data) {
-    const select = $('#selectProdutos')
-    const produtos = JSON.stringify(data)
-    let option
-    for (var i = produtos.length - 1; i >= 0; i--) {
-        option = new Option(i, produtos[i].nome)
-        select.add(option)
-    }
-});
-
 }
-
+/**
 $(document).ready(function() {
   $('#inputOculto').hide();
   $('#labelOculto').hide();
@@ -32,16 +20,7 @@ $(document).ready(function() {
     }
   }); 
 });
-
-/*
-    var x = [
-                1 = {
-                    1:[{50:14},{75:9.5},{100:7.2},{150:4.8},{200:3.6}],
-                    2:[{50:9.5},{75:6.4},{100:4.8}]
-                }
-            ];
-            Diferencial de temperatura > Tipo de isolamento > Espessura
-*/
+**/
     var fatorTabela = {
         1:{1:{50:14,75:9.5,100:7.2,150:4.8,200:3.6},2:{50:9.5,75:6.4,100:4.8}},
         10:{1:{50:143,75:95,100:72,150:48,200:36},2:{50:95,75:64,100:48}},
@@ -68,12 +47,8 @@ $(document).ready(function() {
         68:{1:{50:974,75:650,100:487,150:325,200:243},2:{50:650,75:433,100:325}},
         70:{1:{50:1000,75:668,100:500,150:335,200:250},2:{50:668,75:445,100:335}},
     }
-    //console.log(fatorTabela["1"]["2"]["75"]);
-
-    
 
 function calcular(){
-    
     //Primeira Página
     //var comprimento = document.getElementById("Comprimento").value 
     //var largura = document.getElementById("Largura").value
@@ -101,15 +76,14 @@ function calcular(){
     //Pegando o valor do select tipo de isolamento.
     var valorIsolamento = document.getElementById('mySelect').value;
     var trocasDeAr = 0;
+    var calorNecessario = 0;
     volume = (comprimento * largura) * altura;
 
-    
-
-
-
     area = comprimento * largura;
-    
-    
+
+    $('#areaDoPiso').val(area);
+    $('#volume').val(volume);
+
     diferencialTemperatura = tempExterna - tempInterna;
     
     //Aproximando de acordo com a tabela.
@@ -211,45 +185,45 @@ function calcular(){
     
     //Segunda soma.
     
-
+    //FATOR TABELA 2B
     if (volume > 0 && volume < 7 ){
-        trocasDeAr =5;
+        trocasDeAr = 36;
     }else if (volume >= 7 && volume < 9 ){
-        trocasDeAr = 7;
-    }else if (volume > 8 && volume <= 12){
-        trocasDeAr = 10;
-    }else if (volume > 12 && volume <= 17){
-        trocasDeAr = 15;
-    }else if (volume > 17 && volume <= 22){
-        trocasDeAr = 20;
-    }else if (volume > 22 && volume <= 27){
-        trocasDeAr = 25;
-    }else if (volume > 27 && volume <= 34){
         trocasDeAr = 30;
+    }else if (volume > 8 && volume <= 12){
+        trocasDeAr = 24;
+    }else if (volume > 12 && volume <= 17){
+        trocasDeAr = 20;
+    }else if (volume > 17 && volume <= 22){
+        trocasDeAr = 17;
+    }else if (volume > 22 && volume <= 27){
+        trocasDeAr = 15;
+    }else if (volume > 27 && volume <= 34){
+        trocasDeAr = 13;
     }else if (volume > 34 && volume <= 44){
-        trocasDeAr = 40;
+        trocasDeAr = 11;
     }else if (volume > 44 && volume <= 54){
-        trocasDeAr = 50;
+        trocasDeAr = 10;
     }else if (volume > 54 && volume <= 70){
-        trocasDeAr = 60;
+        trocasDeAr = 9;
     }else if (volume > 70 && volume <= 90){
-        trocasDeAr = 80;
+        trocasDeAr = 8;
     }else if (volume > 90 && volume <= 112){
-        trocasDeAr = 100;
+        trocasDeAr = 7;
     }else if (volume > 112 && volume <= 135){
-        trocasDeAr = 125;
+        trocasDeAr = 6;
     }else if (volume > 135 && volume <= 175){
-        trocasDeAr = 150;
+        trocasDeAr = 5.5;
     }else if (volume > 175 && volume <= 249){
-        trocasDeAr = 200;
+        trocasDeAr = 4.5;
     }else if (volume > 249 && volume <= 349){
-        trocasDeAr = 300;
+        trocasDeAr = 3.7;
     }else if (volume > 349 && volume <= 449){
-        trocasDeAr = 400;
+        trocasDeAr = 3.2;
     }else if (volume > 449 && volume <= 549){
-        trocasDeAr = 500;
+        trocasDeAr = 2.8;
     }else if (volume > 549 && volume <= 849){
-        trocasDeAr = 700;
+        trocasDeAr = 2.3;
     }else if (volume > 849 && volume <= 1099){
         trocasDeAr = 1.9;
     }else if (volume > 1099 && volume <= 1349){
@@ -267,11 +241,9 @@ function calcular(){
     }
 
     
-
-    var calorNecessario = 0;
-   
+    //FATOR TABELA 3
     if (tempExterna <= 17){
-        if (tempInterna >= 7){
+        if (tempInterna >= 7 ){
             calorNecessario = 1.8;
         }else if (tempInterna < 7 && tempInterna > 2){
             calorNecessario = 4.3;
@@ -293,14 +265,113 @@ function calcular(){
             calorNecessario = 23.5;
         }else if (tempInterna <= -38){
             calorNecessario = 25.8;
-        }else{
-            calorNecessario=0;
+        }
+    }else if(tempExterna > 17 && tempExterna < 23){
+        if (tempInterna >= 7){
+            calorNecessario = 5.1;
+        }else if (tempInterna < 7 && tempInterna > 2){
+            calorNecessario = 7.7;
+        }else if (tempInterna <= 2 && tempInterna > -3 ){
+            calorNecessario = 10.5;
+        }else if (tempInterna <= -3 && tempInterna > -8 ){
+            calorNecessario = 13.2;
+        }else if (tempInterna <= -8 && tempInterna > -13 ){
+            calorNecessario = 15.5;
+        }else if (tempInterna <= -13 && tempInterna > -18 ){
+            calorNecessario = 18.1;
+        }else if (tempInterna <= -18 && tempInterna > -23 ){
+            calorNecessario = 20.4;
+        }else if (tempInterna <= -23 && tempInterna > -28 ){
+            calorNecessario = 22.6;
+        }else if (tempInterna <= -28 && tempInterna > -33 ){
+            calorNecessario = 25;
+        }else if (tempInterna <= -33 && tempInterna > -38 ){
+            calorNecessario = 27.4;
+        }else if (tempInterna <= -38){
+            calorNecessario = 29.8;
+        }
+    }else if(tempExterna >= 23 && tempExterna < 28){
+        if (tempInterna >= 7){
+            calorNecessario = 8.9;
+        }else if (tempInterna < 7 && tempInterna > 2){
+            calorNecessario = 11.7;
+        }else if (tempInterna <= 2 && tempInterna > -3 ){
+            calorNecessario = 14.5;
+        }else if (tempInterna <= -3 && tempInterna > -8 ){
+            calorNecessario = 17.3;
+        }else if (tempInterna <= -8 && tempInterna > -13 ){
+            calorNecessario = 19.7;
+        }else if (tempInterna <= -13 && tempInterna > -18 ){
+            calorNecessario = 22.3;
+        }else if (tempInterna <= -18 && tempInterna > -23 ){
+            calorNecessario = 24.7;
+        }else if (tempInterna <= -23 && tempInterna > -28 ){
+            calorNecessario = 27;
+        }else if (tempInterna <= -28 && tempInterna > -33 ){
+            calorNecessario = 29.5;
+        }else if (tempInterna <= -33 && tempInterna > -38 ){
+            calorNecessario = 32;
+        }else if (tempInterna <= -38){
+            calorNecessario = 34.5;
+        }
+    }else if(tempExterna >= 28 && tempExterna < 33){
+        if (tempInterna >= 7){
+            calorNecessario = 13.6;
+        }else if (tempInterna < 7 && tempInterna > 2){
+            calorNecessario = 16.5;
+        }else if (tempInterna <= 2 && tempInterna > -3 ){
+            calorNecessario = 19.4;
+        }else if (tempInterna <= -3 && tempInterna > -8 ){
+            calorNecessario = 22.3;
+        }else if (tempInterna <= -8 && tempInterna > -13 ){
+            calorNecessario = 24.8;
+        }else if (tempInterna <= -13 && tempInterna > -18 ){
+            calorNecessario = 27.5;
+        }else if (tempInterna <= -18 && tempInterna > -23 ){
+            calorNecessario = 30;
+        }else if (tempInterna <= -23 && tempInterna > -28 ){
+            calorNecessario = 32.4;
+        }else if (tempInterna <= -28 && tempInterna > -33 ){
+            calorNecessario = 35;
+        }else if (tempInterna <= -33 && tempInterna > -38 ){
+            calorNecessario = 37.7;
+        }else if (tempInterna <= -38){
+            calorNecessario = 40.3;
+        }
+    }else if(tempExterna >= 33 && tempExterna <= 40){
+        if (tempInterna >= 7){
+            calorNecessario = 26;
+        }else if (tempInterna < 7 && tempInterna > 2){
+            calorNecessario = 29.2;
+        }else if (tempInterna <= 2 && tempInterna > -3 ){
+            calorNecessario = 32.3;
+        }else if (tempInterna <= -3 && tempInterna > -8 ){
+            calorNecessario = 35.5;
+        }else if (tempInterna <= -8 && tempInterna > -13 ){
+            calorNecessario = 38.2;
+        }else if (tempInterna <= -13 && tempInterna > -18 ){
+            calorNecessario = 41.2;
+        }else if (tempInterna <= -18 && tempInterna > -23 ){
+            calorNecessario = 43.9;
+        }else if (tempInterna <= -23 && tempInterna > -28 ){
+            calorNecessario = 46.7;
+        }else if (tempInterna <= -28 && tempInterna > -33 ){
+            calorNecessario = 49.5;
+        }else if (tempInterna <= -33 && tempInterna > -38 ){
+            calorNecessario = 52.5;
+        }else if (tempInterna <= -38){
+            calorNecessario = 55.4;
         }
     }
 
+    var infiltracao = largura * comprimento * altura * trocasDeAr * calorNecessario;
     
-    
+    console.log(infiltracao);
+    console.log(totalPrimeira);
 
+    var cargaTermicaDiaria = totalPrimeira + infiltracao;
+
+     console.log(cargaTermicaDiaria)
 
     $('.mySelect option:selected').text()
     valorSelect = $('#mySelect').val()
@@ -315,37 +386,6 @@ function calcular(){
 
     //fatorTabela1 = altura * largura * 
 
-    $('#areaDoPiso').val(area);
-    $('#volume').val(volume);
+    
 
 }
-
-
-//JSON
-
-$.ajax({
-    url: "produtos.json",
-    success: function(data){
-
-    }
-});
-
-var dados;
-$.ajax({
-    url: "produtos.json",
-    success: function(data){
-        dados = data;
-    }
-});
-
-
-
-
-
-
-var populateInputs = function(data){
-    for (var prop in data){
-        var val = data[prop];
-        $("#"+prop).val(val);
-    }; 
-};

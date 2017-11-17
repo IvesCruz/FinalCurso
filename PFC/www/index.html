@@ -74,7 +74,7 @@
 
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="Altura" name="tx_altura" type="number" class="validate" onblur="calcular()">
+                            <input id="Altura" name="tx_altura" type="number" step="any" class="validate" onblur="calcular()">
                             <label for="Altura">Altura</label>
                         </div>
                     </div>
@@ -112,11 +112,12 @@
                             <option value="" disabled selected>Escolha sua opção</option>
                             <option value="1">Poliestireno / Isopor</option>
                             <option value="2">Poliuretano</option>
-                            <option value="3">Outros</option>
+                            <!--<option value="3">Outros</option>-->
                         </select>
                         <label>Tipo de Isolamento</label>
                     </div>
-                
+                    
+                    <!--
                     <div class="row">
                         <div class="input-field col s12">
                             <label id="labelOculto">Condutividade Térmica do Isolamento</label>
@@ -125,6 +126,7 @@
                             <input id="ConduTermi" name="tx_ConduTermi" type="text" class="validate">
                         </div>
                     </div>
+                    -->
                     
                     <div class="row">
                         <div class="input-field col s12">
@@ -140,12 +142,14 @@
                         </div>
                     </div>
 
+                    <!--
                     <div class="row">
                         <div class="input-field col s12">
                             <input id="Frequencia" name="tx_Frequencia" type="number" class="validate">
                             <label for="Frequencia">Frequência</label>
                         </div>
                     </div>
+                    -->
 
                     <div class="input-field col sm 12">
                         <button type="submit" class="waves-effect waves-light btn" onclick="calcular()">AVANÇAR</button>

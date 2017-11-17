@@ -22,7 +22,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+    <script type="text/javascript" src="./js/index.js"></script>
     <link type="text/css" rel="stylesheet" href="css/index.css"/>
     <title>CálculoDeCargaTérmica</title>
 </head>
@@ -74,7 +74,7 @@
 
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="Altura" name="tx_altura" type="number" class="validate" onblur="calcular()">
+                            <input id="Altura" name="tx_altura" type="number" step="any" class="validate" onblur="calcular()">
                             <label for="Altura">Altura</label>
                         </div>
                     </div>
@@ -112,11 +112,12 @@
                             <option value="" disabled selected>Escolha sua opção</option>
                             <option value="1">Poliestireno / Isopor</option>
                             <option value="2">Poliuretano</option>
-                            <option value="3">Outros</option>
+                            <!--<option value="3">Outros</option>-->
                         </select>
                         <label>Tipo de Isolamento</label>
                     </div>
-                
+                    
+                    <!--
                     <div class="row">
                         <div class="input-field col s12">
                             <label id="labelOculto">Condutividade Térmica do Isolamento</label>
@@ -125,6 +126,7 @@
                             <input id="ConduTermi" name="tx_ConduTermi" type="text" class="validate">
                         </div>
                     </div>
+                    -->
                     
                     <div class="row">
                         <div class="input-field col s12">
@@ -140,12 +142,14 @@
                         </div>
                     </div>
 
+                    <!--
                     <div class="row">
                         <div class="input-field col s12">
                             <input id="Frequencia" name="tx_Frequencia" type="number" class="validate">
                             <label for="Frequencia">Frequência</label>
                         </div>
                     </div>
+                    -->
 
                     <div class="input-field col sm 12">
                         <button type="submit" class="waves-effect waves-light btn" onclick="calcular()">AVANÇAR</button>
@@ -165,6 +169,12 @@
         $('ul.tabs').tabs();
         $('tabs').tabs({});
   });
+</script>
+<script type="text/javascript">
+    function calcula(){
+        var valorIsolamento = document.getElementById('mySelect').value;
+        console.log(valorIsolamento);
+    }
 </script>
     </body>
 </html>
