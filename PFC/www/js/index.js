@@ -70,6 +70,8 @@ $(document).ready(function() {
     }
     //console.log(fatorTabela["1"]["2"]["75"]);
 
+    
+
 function calcular(){
     
     //Primeira Página
@@ -98,63 +100,64 @@ function calcular(){
 
     //Pegando o valor do select tipo de isolamento.
     var valorIsolamento = document.getElementById('mySelect').value;
-    
-    
-
-
-
+    var trocasDeAr = 0;
     volume = (comprimento * largura) * altura;
+
+    
+
+
+
     area = comprimento * largura;
-    //var fatorTabela1 = altura * largura
+    
     
     diferencialTemperatura = tempExterna - tempInterna;
     
     //Aproximando de acordo com a tabela.
-    if (diferencialTemperatura >= 1 && diferencialTemperatura < 10){
+    if (diferencialTemperatura >= 1 && diferencialTemperatura < 5){
         diferencialTemperatura = 1;
-    }else if (diferencialTemperatura >=10 && diferencialTemperatura < 15){
+    }else if (diferencialTemperatura >= 5 && diferencialTemperatura < 13){
         diferencialTemperatura = 10;
-    }else if (diferencialTemperatura >=15 && diferencialTemperatura < 20){
+    }else if (diferencialTemperatura >=13 && diferencialTemperatura < 18){
         diferencialTemperatura = 15;
-    }else if (diferencialTemperatura >=20 && diferencialTemperatura < 23){
+    }else if (diferencialTemperatura >=17 && diferencialTemperatura < 22){
         diferencialTemperatura = 20;
-    }else if (diferencialTemperatura >=23 && diferencialTemperatura < 25){
+    }else if (diferencialTemperatura == 22 || diferencialTemperatura == 23){
         diferencialTemperatura = 23;
-    }else if (diferencialTemperatura >=25 && diferencialTemperatura < 28){
+    }else if (diferencialTemperatura >= 24 && diferencialTemperatura < 27){
         diferencialTemperatura = 25;
-    }else if (diferencialTemperatura >=28 && diferencialTemperatura < 30){
+    }else if (diferencialTemperatura == 27 || diferencialTemperatura == 28){
         diferencialTemperatura = 28;
-    }else if (diferencialTemperatura >=30 && diferencialTemperatura < 33){
+    }else if (diferencialTemperatura >= 29 && diferencialTemperatura < 32){
         diferencialTemperatura = 30;
-    }else if (diferencialTemperatura >=33 && diferencialTemperatura < 35){
+    }else if (diferencialTemperatura == 32 || diferencialTemperatura == 33){
         diferencialTemperatura = 33;
-    }else if (diferencialTemperatura >=35 && diferencialTemperatura < 38){
+    }else if (diferencialTemperatura >=34 && diferencialTemperatura < 37){
         diferencialTemperatura = 35;
-    }else if (diferencialTemperatura >=38 && diferencialTemperatura < 40){
+    }else if (diferencialTemperatura ==37 || diferencialTemperatura == 38){
         diferencialTemperatura = 38;
-    }else if (diferencialTemperatura >=40 && diferencialTemperatura < 43){
+    }else if (diferencialTemperatura >= 39 && diferencialTemperatura < 42){
         diferencialTemperatura = 40;
-    }else if (diferencialTemperatura >=43 && diferencialTemperatura < 45){
+    }else if (diferencialTemperatura == 42 && diferencialTemperatura == 43){
         diferencialTemperatura = 43;
-    }else if (diferencialTemperatura >=45 && diferencialTemperatura < 48){
+    }else if (diferencialTemperatura >= 44 && diferencialTemperatura < 47){
         diferencialTemperatura = 45;
-    }else if (diferencialTemperatura >=48 && diferencialTemperatura < 50){
+    }else if (diferencialTemperatura == 47 || diferencialTemperatura == 48){
         diferencialTemperatura = 48;
-    }else if (diferencialTemperatura >=50 && diferencialTemperatura < 53){
+    }else if (diferencialTemperatura >= 49 && diferencialTemperatura < 52){
         diferencialTemperatura = 50;
-    }else if (diferencialTemperatura >=53 && diferencialTemperatura < 55){
+    }else if (diferencialTemperatura ==52 || diferencialTemperatura < 53){
         diferencialTemperatura = 53;
-    }else if (diferencialTemperatura >=55 && diferencialTemperatura < 58){
+    }else if (diferencialTemperatura >=54 && diferencialTemperatura < 57){
         diferencialTemperatura = 55;
-    }else if (diferencialTemperatura >=58 && diferencialTemperatura < 60){
+    }else if (diferencialTemperatura == 57 || diferencialTemperatura == 58){
         diferencialTemperatura = 58;
-    }else if (diferencialTemperatura >=60 && diferencialTemperatura < 63){
+    }else if (diferencialTemperatura >= 59 && diferencialTemperatura < 62){
         diferencialTemperatura = 60;
-    }else if (diferencialTemperatura >=63 && diferencialTemperatura < 65){
+    }else if (diferencialTemperatura == 62 || diferencialTemperatura == 63){
         diferencialTemperatura = 63;
-    }else if (diferencialTemperatura >=65 && diferencialTemperatura < 68){
+    }else if (diferencialTemperatura >= 64 && diferencialTemperatura < 67){
         diferencialTemperatura = 65;
-    }else if (diferencialTemperatura >=68 && diferencialTemperatura < 70){
+    }else if (diferencialTemperatura >=67 && diferencialTemperatura < 70){
         diferencialTemperatura = 68;
     }else if (diferencialTemperatura >=70){
         diferencialTemperatura = 70;
@@ -162,23 +165,23 @@ function calcular(){
     
     //Aproximando a espessura de isolamento
     if(valorIsolamento == 1){
-        if (espessuraIsolamento > 0 && espessuraIsolamento <= 50){
+        if (espessuraIsolamento > 0 && espessuraIsolamento <= 62){
             espessuraIsolamento = 50;
-        }else if(espessuraIsolamento > 50 && espessuraIsolamento <= 75){
+        }else if(espessuraIsolamento > 62 && espessuraIsolamento <= 87){
             espessuraIsolamento = 75;
-        }else if(espessuraIsolamento > 75 && espessuraIsolamento <= 100){
+        }else if(espessuraIsolamento > 87 && espessuraIsolamento <= 124){
             espessuraIsolamento = 100;
-        }else if(espessuraIsolamento > 100 && espessuraIsolamento <= 150){
+        }else if(espessuraIsolamento > 124 && espessuraIsolamento <= 174){
             espessuraIsolamento = 150;
-        }else if(espessuraIsolamento > 150){
+        }else if(espessuraIsolamento > 174){
             espessuraIsolamento = 200;
         }
     }else if (valorIsolamento == 2){
-        if (espessuraIsolamento > 0 && espessuraIsolamento <= 50){
+        if (espessuraIsolamento > 0 && espessuraIsolamento <= 62){
             espessuraIsolamento = 50;
-        }else if(espessuraIsolamento > 50 && espessuraIsolamento <= 75){
+        }else if(espessuraIsolamento > 62 && espessuraIsolamento <= 87){
             espessuraIsolamento = 75;
-        }else if(espessuraIsolamento > 75){
+        }else if(espessuraIsolamento > 87){
             espessuraIsolamento = 100;
         }
     }
@@ -188,6 +191,7 @@ function calcular(){
     valorIsolamento = valorIsolamento.toString();
     espessuraIsolamento = espessuraIsolamento.toString();
     
+    //Primeira soma.
     var fator = fatorTabela[diferencialTemperatura][valorIsolamento][espessuraIsolamento];
     
     var piso = largura * comprimento * fator;
@@ -205,6 +209,98 @@ function calcular(){
     var totalPrimeira = piso+parede1+parede2+teto;
     console.log(totalPrimeira);
     
+    //Segunda soma.
+    
+
+    if (volume > 0 && volume < 7 ){
+        trocasDeAr =5;
+    }else if (volume >= 7 && volume < 9 ){
+        trocasDeAr = 7;
+    }else if (volume > 8 && volume <= 12){
+        trocasDeAr = 10;
+    }else if (volume > 12 && volume <= 17){
+        trocasDeAr = 15;
+    }else if (volume > 17 && volume <= 22){
+        trocasDeAr = 20;
+    }else if (volume > 22 && volume <= 27){
+        trocasDeAr = 25;
+    }else if (volume > 27 && volume <= 34){
+        trocasDeAr = 30;
+    }else if (volume > 34 && volume <= 44){
+        trocasDeAr = 40;
+    }else if (volume > 44 && volume <= 54){
+        trocasDeAr = 50;
+    }else if (volume > 54 && volume <= 70){
+        trocasDeAr = 60;
+    }else if (volume > 70 && volume <= 90){
+        trocasDeAr = 80;
+    }else if (volume > 90 && volume <= 112){
+        trocasDeAr = 100;
+    }else if (volume > 112 && volume <= 135){
+        trocasDeAr = 125;
+    }else if (volume > 135 && volume <= 175){
+        trocasDeAr = 150;
+    }else if (volume > 175 && volume <= 249){
+        trocasDeAr = 200;
+    }else if (volume > 249 && volume <= 349){
+        trocasDeAr = 300;
+    }else if (volume > 349 && volume <= 449){
+        trocasDeAr = 400;
+    }else if (volume > 449 && volume <= 549){
+        trocasDeAr = 500;
+    }else if (volume > 549 && volume <= 849){
+        trocasDeAr = 700;
+    }else if (volume > 849 && volume <= 1099){
+        trocasDeAr = 1.9;
+    }else if (volume > 1099 && volume <= 1349){
+        trocasDeAr = 1.7;
+    }else if (volume > 1349 && volume <= 1749){
+        trocasDeAr = 1.5;
+    }else if (volume > 1749 && volume <= 2499){
+        trocasDeAr = 1.3;
+    }else if (volume > 2499 && volume <= 4449){
+        trocasDeAr = 1.1;
+    }else if (volume > 4499 && volume <= 7499){
+        trocasDeAr = 1;
+    }else if (volume > 7499){
+        trocasDeAr = 0.8;
+    }
+
+    
+
+    var calorNecessario = 0;
+   
+    if (tempExterna <= 17){
+        if (tempInterna >= 7){
+            calorNecessario = 1.8;
+        }else if (tempInterna < 7 && tempInterna > 2){
+            calorNecessario = 4.3;
+        }else if (tempInterna <= 2 && tempInterna > -3 ){
+            calorNecessario = 7;
+        }else if (tempInterna <= -3 && tempInterna > -8 ){
+            calorNecessario = 9.7;
+        }else if (tempInterna <= -8 && tempInterna > -13 ){
+            calorNecessario = 12;
+        }else if (tempInterna <= -13 && tempInterna > -18 ){
+            calorNecessario = 14.4;
+        }else if (tempInterna <= -18 && tempInterna > -23 ){
+            calorNecessario = 16.6;
+        }else if (tempInterna <= -23 && tempInterna > -28 ){
+            calorNecessario = 18.8;
+        }else if (tempInterna <= -28 && tempInterna > -33 ){
+            calorNecessario = 21.1;
+        }else if (tempInterna <= -33 && tempInterna > -38 ){
+            calorNecessario = 23.5;
+        }else if (tempInterna <= -38){
+            calorNecessario = 25.8;
+        }else{
+            calorNecessario=0;
+        }
+    }
+
+    
+    
+
 
     $('.mySelect option:selected').text()
     valorSelect = $('#mySelect').val()
