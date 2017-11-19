@@ -47,21 +47,31 @@ $(document).ready(function() {
         68:{1:{50:974,75:650,100:487,150:325,200:243},2:{50:650,75:433,100:325}},
         70:{1:{50:1000,75:668,100:500,150:335,200:250},2:{50:668,75:445,100:335}},
     }
+    
+function pegaParametros(){
+    comprimento = $("[name='tx_comprimento']").val();
+    largura = $("[name='tx_largura']").val();
+    altura = $("[name='tx_altura']").val();
+    tempInterna = $("[name='tx_TempInterna']").val();
+    conduTermi = $("[name='tx_ConduTermi']").val();
+    espessuraIsolamento = $("[name='tx_EspessuraIsolamento']").val();
+    tempExterna = $("[name='tx_TempExterna']").val();
+    frequencia = $("[name='tx_Frequencia']").val();
+
+}
+
+function armazenaDados(){
+    localStorage.setItem("tempInterna",tempInterna);
+    localStorage.setItem("totalPrimeira",totalPrimeira);
+    localStorage.setItem("cargaTermicaDiaria",cargaTermicaDiaria);
+}
 
 function calcular(){
     //Primeira Página
     //var comprimento = document.getElementById("Comprimento").value 
     //var largura = document.getElementById("Largura").value
-    var comprimento = $("[name='tx_comprimento']").val();
-    var largura = $("[name='tx_largura']").val();
-    var altura = $("[name='tx_altura']").val();
-    var tempInterna = $("[name='tx_TempInterna']").val();
-    var conduTermi = $("[name='tx_ConduTermi']").val();
-    var espessuraIsolamento = $("[name='tx_EspessuraIsolamento']").val();
-    var tempExterna = $("[name='tx_TempExterna']").val();
-    var frequencia = $("[name='tx_Frequencia']").val();
-    
 
+    /*
     //Primeira Página
     //window.localStorage.setItem("tx_comprimento", comprimento);
     window.localStorage['tx_comprimento'] = comprimento;
@@ -72,6 +82,9 @@ function calcular(){
     window.localStorage['tx_EspessuraIsolamento'] = espessuraIsolamento;
     window.localStorage['tx_TempExterna'] = tempExterna;
     window.localStorage['tx_Frequencia'] = frequencia;
+    */
+
+    pegaParametros();
 
     //Pegando o valor do select tipo de isolamento.
     var valorIsolamento = document.getElementById('mySelect').value;
@@ -180,7 +193,7 @@ function calcular(){
     var teto = largura * comprimento * fator;
     console.log(teto);
     
-    var totalPrimeira = piso+parede1+parede2+teto;
+    totalPrimeira = piso+parede1+parede2+teto;
     console.log(totalPrimeira);
     
     //Segunda soma.
@@ -369,9 +382,9 @@ function calcular(){
     console.log(infiltracao);
     console.log(totalPrimeira);
 
-    var cargaTermicaDiaria = totalPrimeira + infiltracao;
+    cargaTermicaDiaria = totalPrimeira + infiltracao;
 
-     console.log(cargaTermicaDiaria)
+    console.log(cargaTermicaDiaria);
 
     $('.mySelect option:selected').text()
     valorSelect = $('#mySelect').val()
@@ -386,6 +399,6 @@ function calcular(){
 
     //fatorTabela1 = altura * largura * 
 
-    
+    armazenaDados();
 
 }

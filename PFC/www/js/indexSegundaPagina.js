@@ -1,17 +1,13 @@
+/*
+    window.localStorage['tx_MassaTotalArma'] = massaTotalArmazenada;
+    window.localStorage['tx_MassaProdMov'] = massaProdutoMovimento;
+    window.localStorage['tx_TempResfCongProd'] = tempoCongelamentoProduto;
+    window.localStorage['tx_TempEntrada'] = temperaturaEntrada;
+*/
 
-		{
-			
-			{"nome": "abacaxi"},
-			{"densidade_de_armazenagem":450},
-			{"temperatura_congelamento_produto":-1.10},
-			{"calor_especifico_produto_nao_congelado":0.910},
-			{"calor_especifico_produto_congelado":0.460},
-			{"calor_latente_congelamento":68},
-			{"calor_de_respiracao":630		}
-		
-		},
+var listaProdutos = {
 
-		{
+		2:{
 			nome:"abacate",
 			densidade_de_armazenagem:330,
 			temperatura_congelamento_produto:-0.70,
@@ -21,7 +17,18 @@
 			calor_de_respiracao:3600
 
 		},
-		{
+		3:{
+			
+			nome: "abacaxi",
+			densidade_de_armazenagem:450,
+			temperatura_congelamento_produto:-1.10,
+			calor_especifico_produto_nao_congelado:0.910,
+			calor_especifico_produto_congelado:0.460,
+			calor_latente_congelamento:68,
+			calor_de_respiracao:630
+		
+		},
+		4:{
 			nome:"abobora",
 			densidade_de_armazenagem:200,
 			temperatura_congelamento_produto:-0.60,
@@ -30,7 +37,7 @@
 			calor_latente_congelamento:68,
 			calor_de_respiracao:3400
 		},
-		{
+		5:{
 			nome:"acai_polpa",
 			densidade_de_armazenagem:420,
 			temperatura_congelamento_produto:-1.10,
@@ -39,7 +46,7 @@
 			calor_latente_congelamento:72,
 			calor_de_respiracao:0
 		},
-		{
+		6:{
 			nome:"acerola",
 			densidade_de_armazenagem:500,
 			temperatura_congelamento_produto:-1.70,
@@ -48,7 +55,7 @@
 			calor_latente_congelamento:64,
 			calor_de_respiracao:0
 		},
-		{
+		7:{
 			nome:"acucar_cristalizado",
 			densidade_de_armazenagem:350,
 			temperatura_congelamento_produto:1.10,
@@ -57,7 +64,7 @@
 			calor_latente_congelamento:40,
 			calor_de_respiracao:0
 		},
-		{
+		8:{
 			nome:"agua",
 			densidade_de_armazenagem:700,
 			temperatura_congelamento_produto:0.00,
@@ -66,7 +73,7 @@
 			calor_latente_congelamento:80,
 			calor_de_respiracao:0
 		},
-		{
+		9:{
 			nome:"aipo",
 			densidade_de_armazenagem:350,
 			temperatura_congelamento_produto:-0.60,
@@ -75,7 +82,7 @@
 			calor_latente_congelamento:75,
 			calor_de_respiracao:403
 		},
-		{
+		10:{
 			nome:"alcachofra",
 			densidade_de_armazenagem:350,
 			temperatura_congelamento_produto:-1.10,
@@ -84,7 +91,7 @@
 			calor_latente_congelamento:67,
 			calor_de_respiracao:1840
 		},
-		{
+		11:{
 			nome:"alface",
 			densidade_de_armazenagem:110,
 			temperatura_congelamento_produto:-0.40,
@@ -93,7 +100,7 @@
 			calor_latente_congelamento:76,
 			calor_de_respiracao:860
 		},
-		{
+		12:{
 			//Parei aqui  //Continuei 
 			nome:"alho_porro_curado",
 			densidade_de_armazenagem:150,
@@ -103,7 +110,7 @@
 			calor_latente_congelamento:49,
 			calor_de_respiracao:860
 		},
-		{
+		13:{
 			nome:"alho_seco",
 			densidade_de_armazenagem:150,
 			temperatura_congelamento_produto:-0.80,
@@ -112,7 +119,7 @@
 			calor_latente_congelamento:49,
 			calor_de_respiracao:0
 		},
-		{
+		14:{
 			nome:"ameixa_fresca",
 			densidade_de_armazenagem:320,
 			temperatura_congelamento_produto:-1.80,
@@ -121,7 +128,7 @@
 			calor_latente_congelamento:69,
 			calor_de_respiracao:550
 		},
-		{
+		15:{
 			nome:"amora_preta",
 			densidade_de_armazenagem:500,
 			temperatura_congelamento_produto:-1.10,
@@ -130,7 +137,7 @@
 			calor_latente_congelamento:68,
 			calor_de_respiracao:1100
 		},
-		{
+		16:{
 			nome:"aspargo",
 			densidade_de_armazenagem:400,
 			temperatura_congelamento_produto:-0.60,
@@ -139,7 +146,7 @@
 			calor_latente_congelamento:75,
 			calor_de_respiracao:3400
 		},
-		{
+		17:{
 			nome:"azeitona",
 			densidade_de_armazenagem:500,
 			temperatura_congelamento_produto:-1.70,
@@ -148,7 +155,7 @@
 			calor_latente_congelamento:60,
 			calor_de_respiracao:1460
 		},
-		{
+		18:{
 			nome:"bacon_defumado",
 			densidade_de_armazenagem:700,
 			temperatura_congelamento_produto:0.00,
@@ -157,7 +164,7 @@
 			calor_latente_congelamento:16,
 			calor_de_respiracao:0
 		},
-		{
+		19:{
 			nome:"banana",
 			densidade_de_armazenagem:200,
 			temperatura_congelamento_produto:-1.50,
@@ -166,7 +173,7 @@
 			calor_latente_congelamento:60,
 			calor_de_respiracao:2280
 		},
-		{
+		20:{
 			nome:"batata_doce",
 			densidade_de_armazenagem:300,
 			temperatura_congelamento_produto:-1.10,
@@ -175,7 +182,7 @@
 			calor_latente_congelamento:55,
 			calor_de_respiracao:1330
 		},
-		{
+		21:{
 			nome:"batata_precoce",
 			densidade_de_armazenagem:300,
 			temperatura_congelamento_produto:-0.60,
@@ -184,7 +191,7 @@
 			calor_latente_congelamento:64,
 			calor_de_respiracao:1100
 		},
-		{
+		22:{
 			nome:"batata_semente",
 			densidade_de_armazenagem:300,
 			temperatura_congelamento_produto:-0.60,
@@ -193,7 +200,7 @@
 			calor_latente_congelamento:63,
 			calor_de_respiracao:550
 		},
-		{
+		23:{
 			nome:"bebidas_destiladas",
 			densidade_de_armazenagem:0,
 			temperatura_congelamento_produto:-28.00,
@@ -202,7 +209,7 @@
 			calor_latente_congelamento:72,
 			calor_de_respiracao:0
 		},
-		{
+		24:{
 			nome:"beringela",
 			densidade_de_armazenagem:300,
 			temperatura_congelamento_produto:-0.60,
@@ -211,7 +218,7 @@
 			calor_latente_congelamento:75,
 			calor_de_respiracao:0
 		},
-		{
+		25:{
 			nome:"beterraba",
 			densidade_de_armazenagem:300,
 			temperatura_congelamento_produto:-1.10,
@@ -220,7 +227,7 @@
 			calor_latente_congelamento:71,
 			calor_de_respiracao:680
 		},
-		{
+		26:{
 			nome:"brocoli",
 			densidade_de_armazenagem:170,
 			temperatura_congelamento_produto:-0.60,
@@ -229,7 +236,7 @@
 			calor_latente_congelamento:73,
 			calor_de_respiracao:1290
 		},
-		{
+		27:{
 			nome:"cabrito_fresco",
 			densidade_de_armazenagem:450,
 			temperatura_congelamento_produto:-1.70,
@@ -238,7 +245,7 @@
 			calor_latente_congelamento:56,
 			calor_de_respiracao:0
 		},
-		{
+		28:{
 			nome:"cadaver",
 			densidade_de_armazenagem:200,
 			temperatura_congelamento_produto:-1.80,
@@ -247,7 +254,7 @@
 			calor_latente_congelamento:56,
 			calor_de_respiracao:0
 		},
-		{
+		29:{
 			nome:"cafe_verde",
 			densidade_de_armazenagem:500,
 			temperatura_congelamento_produto:0.00,
@@ -256,7 +263,7 @@
 			calor_latente_congelamento:10,
 			calor_de_respiracao:0
 		},
-		{
+		30:{
 			nome:"camarao",
 			densidade_de_armazenagem:500,
 			temperatura_congelamento_produto:-2.20,
@@ -265,7 +272,7 @@
 			calor_latente_congelamento:66,
 			calor_de_respiracao:0
 		},
-		{
+		31:{
 			nome:"caqui",
 			densidade_de_armazenagem:300,
 			temperatura_congelamento_produto:0.00,
@@ -274,7 +281,7 @@
 			calor_latente_congelamento:62,
 			calor_de_respiracao:0
 		},
-		{
+		32:{
 			nome:"carne_bovina",
 			densidade_de_armazenagem:350,
 			temperatura_congelamento_produto:-1.80,
@@ -283,7 +290,7 @@
 			calor_latente_congelamento:56,
 			calor_de_respiracao:0
 		},
-		{
+		33:{
 			nome:"carne_cozida",
 			densidade_de_armazenagem:350,
 			temperatura_congelamento_produto:-1.20,
@@ -292,7 +299,7 @@
 			calor_latente_congelamento:56,
 			calor_de_respiracao:0
 		},
-		{
+		34:{
 			nome:"carne_coelho",
 			densidade_de_armazenagem:300,
 			temperatura_congelamento_produto:-1.80,
@@ -301,7 +308,7 @@
 			calor_latente_congelamento:55,
 			calor_de_respiracao:0
 		},
-		{
+		35:{
 			nome:"carne_suina_fresca",
 			densidade_de_armazenagem:350,
 			temperatura_congelamento_produto:-2.20,
@@ -310,7 +317,7 @@
 			calor_latente_congelamento:30,
 			calor_de_respiracao:0
 		},
-		{
+		36:{
 			nome:"cebola",
 			densidade_de_armazenagem:220,
 			temperatura_congelamento_produto:-1.10,
@@ -319,7 +326,7 @@
 			calor_latente_congelamento:72,
 			calor_de_respiracao:1160
 		},
-		{
+		37:{
 			nome:"cenoura",
 			densidade_de_armazenagem:350,
 			temperatura_congelamento_produto:-1.50,
@@ -328,7 +335,7 @@
 			calor_latente_congelamento:71,
 			calor_de_respiracao:1140
 		},
-		{
+		38:{
 			nome:"cereja",
 			densidade_de_armazenagem:500,
 			temperatura_congelamento_produto:-1.70,
@@ -337,7 +344,7 @@
 			calor_latente_congelamento:64,
 			calor_de_respiracao:320
 		},
-		{
+		39:{
 			nome:"cerveja",
 			densidade_de_armazenagem:0,
 			temperatura_congelamento_produto:-2.20,
@@ -346,7 +353,7 @@
 			calor_latente_congelamento:72,
 			calor_de_respiracao:0
 		},
-		{
+		40:{
 			nome:"chocolate_cobertura",
 			densidade_de_armazenagem:0,
 			temperatura_congelamento_produto:32.00,
@@ -355,7 +362,7 @@
 			calor_latente_congelamento:22,
 			calor_de_respiracao:0
 		},
-		{
+		41:{
 			nome:"chopp",
 			densidade_de_armazenagem:0,
 			temperatura_congelamento_produto:-2.20,
@@ -363,7 +370,8 @@
 			calor_especifico_produto_congelado:0.470,
 			calor_latente_congelamento:72,
 			calor_de_respiracao:0
-		},{
+		},
+		42:{
 			nome:"coco",
 			densidade_de_armazenagem:100,
 			temperatura_congelamento_produto:-0.90,
@@ -371,7 +379,8 @@
 			calor_especifico_produto_congelado:0.340,
 			calor_latente_congelamento:38,
 			calor_de_respiracao:0
-		},{
+		},
+		43:{
 			nome:"cogumelo",
 			densidade_de_armazenagem:200,
 			temperatura_congelamento_produto:-1.10,
@@ -379,7 +388,8 @@
 			calor_especifico_produto_congelado:0.470,
 			calor_latente_congelamento:73,
 			calor_de_respiracao:0
-		},{
+		},
+		44:{
 			nome:"congelados",
 			densidade_de_armazenagem:450,
 			temperatura_congelamento_produto:-2.00,
@@ -387,7 +397,8 @@
 			calor_especifico_produto_congelado:0.410,
 			calor_latente_congelamento:55,
 			calor_de_respiracao:0
-		},{
+		},
+		45:{
 			nome:"couve_de_bruxelas",
 			densidade_de_armazenagem:250,
 			temperatura_congelamento_produto:-0.60,
@@ -395,7 +406,8 @@
 			calor_especifico_produto_congelado:0.460,
 			calor_latente_congelamento:68,
 			calor_de_respiracao:1670
-		},{
+		},
+		46:{
 			nome:"couve_flor",
 			densidade_de_armazenagem:170,
 			temperatura_congelamento_produto:-0.60,
@@ -403,7 +415,8 @@
 			calor_especifico_produto_congelado:0.480,
 			calor_latente_congelamento:76,
 			calor_de_respiracao:380
-		},{
+		},
+		47:{
 			nome:"creme_de_leite",
 			densidade_de_armazenagem:600,
 			temperatura_congelamento_produto:-1.40,
@@ -411,7 +424,8 @@
 			calor_especifico_produto_congelado:0.420,
 			calor_latente_congelamento:59,
 			calor_de_respiracao:0
-		},{
+		},
+		48:{
 			nome:"damasco",
 			densidade_de_armazenagem:200,
 			temperatura_congelamento_produto:-1.10,
@@ -419,7 +433,8 @@
 			calor_especifico_produto_congelado:0.460,
 			calor_latente_congelamento:68,
 			calor_de_respiracao:0
-		},{
+		},
+		49:{
 			nome:"doces_geral",
 			densidade_de_armazenagem:400,
 			temperatura_congelamento_produto:-1.20,
@@ -427,7 +442,8 @@
 			calor_especifico_produto_congelado:0.340,
 			calor_latente_congelamento:30,
 			calor_de_respiracao:0
-		},{
+		},
+		50:{
 			nome:"endivia",
 			densidade_de_armazenagem:110,
 			temperatura_congelamento_produto:-0.60,
@@ -435,7 +451,8 @@
 			calor_especifico_produto_congelado:0.480,
 			calor_latente_congelamento:73,
 			calor_de_respiracao:0
-		},{
+		},
+		51:{
 			nome:"ervilha_verde",
 			densidade_de_armazenagem:450,
 			temperatura_congelamento_produto:-0.60,
@@ -443,7 +460,8 @@
 			calor_especifico_produto_congelado:0.420,
 			calor_latente_congelamento:60,
 			calor_de_respiracao:3410
-		},{
+		},
+		52:{
 			nome:"escarola",
 			densidade_de_armazenagem:170,
 			temperatura_congelamento_produto:-0.60,
@@ -451,7 +469,8 @@
 			calor_especifico_produto_congelado:0.480,
 			calor_latente_congelamento:74,
 			calor_de_respiracao:0
-		},{
+		},
+		53:{
 			nome:"espinafre",
 			densidade_de_armazenagem:250,
 			temperatura_congelamento_produto:-0.60,
@@ -459,7 +478,8 @@
 			calor_especifico_produto_congelado:0.480,
 			calor_latente_congelamento:75,
 			calor_de_respiracao:3200
-		},{
+		},
+		54:{
 			nome:"feijao",
 			densidade_de_armazenagem:500,
 			temperatura_congelamento_produto:-0.90,
@@ -467,7 +487,8 @@
 			calor_especifico_produto_congelado:0.470,
 			calor_latente_congelamento:71,
 			calor_de_respiracao:4310
-		},{
+		},
+		55:{
 			nome:"fermento",
 			densidade_de_armazenagem:300,
 			temperatura_congelamento_produto:-0.00,
@@ -475,7 +496,8 @@
 			calor_especifico_produto_congelado:0.410,
 			calor_latente_congelamento:57,
 			calor_de_respiracao:0
-		},{
+		},
+		56:{
 			nome:"figado",
 			densidade_de_armazenagem:400,
 			temperatura_congelamento_produto:-1.70,
@@ -483,7 +505,8 @@
 			calor_especifico_produto_congelado:0.410,
 			calor_latente_congelamento:55,
 			calor_de_respiracao:0
-		},{
+		},
+		57:{
 			nome:"figo_fresco",
 			densidade_de_armazenagem:300,
 			temperatura_congelamento_produto:-2.20,
@@ -491,7 +514,8 @@
 			calor_especifico_produto_congelado:0.430,
 			calor_latente_congelamento:63,
 			calor_de_respiracao:860
-		},{
+		},
+		58:{
 			nome:"franboesa",
 			densidade_de_armazenagem:250,
 			temperatura_congelamento_produto:-0.70,
@@ -499,7 +523,8 @@
 			calor_especifico_produto_congelado:0.450,
 			calor_latente_congelamento:65,
 			calor_de_respiracao:1390
-		},{
+		},
+		59:{
 			nome:"frango",
 			densidade_de_armazenagem:350,
 			temperatura_congelamento_produto:-2.80,
@@ -507,7 +532,8 @@
 			calor_especifico_produto_congelado:0.420,
 			calor_latente_congelamento:60,
 			calor_de_respiracao:0
-		},{
+		},
+		60:{
 			nome:"frutas",
 			densidade_de_armazenagem:350,
 			temperatura_congelamento_produto:-1.10,
@@ -515,7 +541,8 @@
 			calor_especifico_produto_congelado:0.480,
 			calor_latente_congelamento:72,
 			calor_de_respiracao:500
-		},{
+		},
+		61:{
 			nome:"frutas_frescas",
 			densidade_de_armazenagem:350,
 			temperatura_congelamento_produto:0.00,
@@ -523,7 +550,8 @@
 			calor_especifico_produto_congelado:0.270,
 			calor_latente_congelamento:18,
 			calor_de_respiracao:0
-		},{
+		},
+		62:{
 			nome:"ganso_fresco",
 			densidade_de_armazenagem:400,
 			temperatura_congelamento_produto:-2.80,
@@ -531,7 +559,8 @@
 			calor_especifico_produto_congelado:0.410,
 			calor_latente_congelamento:56,
 			calor_de_respiracao:0
-		},{
+		},
+		63:{
 			nome:"goiaba",
 			densidade_de_armazenagem:300,
 			temperatura_congelamento_produto:-1.10,
@@ -539,7 +568,8 @@
 			calor_especifico_produto_congelado:0.460,
 			calor_latente_congelamento:72,
 			calor_de_respiracao:1700
-		},{
+		},
+		64:{
 			nome:"groselha",
 			densidade_de_armazenagem:0,
 			temperatura_congelamento_produto:-1.70,
@@ -547,7 +577,8 @@
 			calor_especifico_produto_congelado:0.460,
 			calor_latente_congelamento:71,
 			calor_de_respiracao:120
-		},{
+		},
+		65:{
 			nome:"lagosta",
 			densidade_de_armazenagem:300,
 			temperatura_congelamento_produto:-2.20,
@@ -555,7 +586,8 @@
 			calor_especifico_produto_congelado:0.450,
 			calor_latente_congelamento:66,
 			calor_de_respiracao:0
-		},{
+		},
+		66:{
 			nome:"laranja",
 			densidade_de_armazenagem:400,
 			temperatura_congelamento_produto:-0.80,
@@ -563,7 +595,8 @@
 			calor_especifico_produto_congelado:0.460,
 			calor_latente_congelamento:70,
 			calor_de_respiracao:510
-		},{
+		},
+		67:{
 			nome:"laticinios",
 			densidade_de_armazenagem:450,
 			temperatura_congelamento_produto:-0.60,
@@ -571,7 +604,8 @@
 			calor_especifico_produto_congelado:0.420,
 			calor_latente_congelamento:64,
 			calor_de_respiracao:0
-		},{
+		},
+		68:{
 			nome:"leite",
 			densidade_de_armazenagem:350,
 			temperatura_congelamento_produto:-0.60,
@@ -579,7 +613,8 @@
 			calor_especifico_produto_congelado:0.460,
 			calor_latente_congelamento:70,
 			calor_de_respiracao:0
-		},{
+		},
+		69:{
 			nome:"leite_condensado",
 			densidade_de_armazenagem:600,
 			temperatura_congelamento_produto:-15.00,
@@ -587,7 +622,8 @@
 			calor_especifico_produto_congelado:0.280,
 			calor_latente_congelamento:23,
 			calor_de_respiracao:0
-		},{
+		},
+		70:{
 			nome:"lima",
 			densidade_de_armazenagem:400,
 			temperatura_congelamento_produto:-1.60,
@@ -595,7 +631,8 @@
 			calor_especifico_produto_congelado:0.460,
 			calor_latente_congelamento:69,
 			calor_de_respiracao:380
-		},{
+		},
+		71:{
 			nome:"limao",
 			densidade_de_armazenagem:400,
 			temperatura_congelamento_produto:-1.70,
@@ -603,7 +640,8 @@
 			calor_especifico_produto_congelado:0.470,
 			calor_latente_congelamento:71,
 			calor_de_respiracao:770
-		},{
+		},
+		72:{
 			nome:"linguica_defumada",
 			densidade_de_armazenagem:350,
 			temperatura_congelamento_produto:0.00,
@@ -611,7 +649,8 @@
 			calor_especifico_produto_congelado:0.380,
 			calor_latente_congelamento:48,
 			calor_de_respiracao:0
-		},{
+		},
+		73:{
 			nome:"linguica_fresca",
 			densidade_de_armazenagem:350,
 			temperatura_congelamento_produto:-3.30,
@@ -619,7 +658,8 @@
 			calor_especifico_produto_congelado:0.310,
 			calor_latente_congelamento:31,
 			calor_de_respiracao:0
-		},{
+		},
+		74:{
 			nome:"lixo",
 			densidade_de_armazenagem:0,
 			temperatura_congelamento_produto:-1.00,
@@ -627,7 +667,8 @@
 			calor_especifico_produto_congelado:0.550,
 			calor_latente_congelamento:60,
 			calor_de_respiracao:0
-		},{
+		},
+		75:{
 			nome:"maca",
 			densidade_de_armazenagem:250,
 			temperatura_congelamento_produto:-1.10,
@@ -635,7 +676,8 @@
 			calor_especifico_produto_congelado:0.460,
 			calor_latente_congelamento:69,
 			calor_de_respiracao:230
-		},{
+		},
+		76:{
 			nome:"mamao",
 			densidade_de_armazenagem:250,
 			temperatura_congelamento_produto:-0.90,
@@ -643,7 +685,8 @@
 			calor_especifico_produto_congelado:0.470,
 			calor_latente_congelamento:73,
 			calor_de_respiracao:950
-		},{
+		},
+		77:{
 			nome:"manga",
 			densidade_de_armazenagem:250,
 			temperatura_congelamento_produto:-1.10,
@@ -651,7 +694,8 @@
 			calor_especifico_produto_congelado:0.460,
 			calor_latente_congelamento:74,
 			calor_de_respiracao:2320
-		},{
+		},
+		78:{
 			nome:"manteiga",
 			densidade_de_armazenagem:600,
 			temperatura_congelamento_produto:-10.50,
@@ -659,7 +703,8 @@
 			calor_especifico_produto_congelado:0.250,
 			calor_latente_congelamento:13,
 			calor_de_respiracao:0
-		},{
+		},
+		79:{
 			nome:"margarina",
 			densidade_de_armazenagem:400,
 			temperatura_congelamento_produto:0.00,
@@ -667,7 +712,8 @@
 			calor_especifico_produto_congelado:0.250,
 			calor_latente_congelamento:13,
 			calor_de_respiracao:0
-		},{
+		},
+		80:{
 			nome:"marmelo",
 			densidade_de_armazenagem:300,
 			temperatura_congelamento_produto:-2.00,
@@ -675,7 +721,8 @@
 			calor_especifico_produto_congelado:0.460,
 			calor_latente_congelamento:68,
 			calor_de_respiracao:0
-		},{
+		},
+		81:{
 			nome:"mel",
 			densidade_de_armazenagem:300,
 			temperatura_congelamento_produto:0.00,
@@ -683,7 +730,8 @@
 			calor_especifico_produto_congelado:0.260,
 			calor_latente_congelamento:15,
 			calor_de_respiracao:0
-		},{
+		},
+		82:{
 			nome:"melaco",
 			densidade_de_armazenagem:300,
 			temperatura_congelamento_produto:0.00,
@@ -691,7 +739,8 @@
 			calor_especifico_produto_congelado:0.310,
 			calor_latente_congelamento:29,
 			calor_de_respiracao:0
-		},{
+		},
+		83:{
 			nome:"melancia",
 			densidade_de_armazenagem:100,
 			temperatura_congelamento_produto:-1.60,
@@ -699,7 +748,8 @@
 			calor_especifico_produto_congelado:0.480,
 			calor_latente_congelamento:73,
 			calor_de_respiracao:0
-		},{
+		},
+		84:{
 			nome:"melao",
 			densidade_de_armazenagem:160,
 			temperatura_congelamento_produto:-1.10,
@@ -707,7 +757,8 @@
 			calor_especifico_produto_congelado:0.480,
 			calor_latente_congelamento:75,
 			calor_de_respiracao:277
-		},{
+		},
+		85:{
 			nome:"milho_de_pipoca",
 			densidade_de_armazenagem:750,
 			temperatura_congelamento_produto:0.00,
@@ -715,7 +766,8 @@
 			calor_especifico_produto_congelado:0.240,
 			calor_latente_congelamento:11,
 			calor_de_respiracao:0
-		},{
+		},
+		86:{
 			nome:"milho_verde",
 			densidade_de_armazenagem:500,
 			temperatura_congelamento_produto:-0.60,
@@ -723,7 +775,8 @@
 			calor_especifico_produto_congelado:0.420,
 			calor_latente_congelamento:60,
 			calor_de_respiracao:2940
-		},{
+		},
+		87:{
 			nome:"miudos",
 			densidade_de_armazenagem:400,
 			temperatura_congelamento_produto:-1.10,
@@ -731,7 +784,8 @@
 			calor_especifico_produto_congelado:0.400,
 			calor_latente_congelamento:50,
 			calor_de_respiracao:0
-		},{
+		},
+		88:{
 			nome:"molusco_fresco",
 			densidade_de_armazenagem:400,
 			temperatura_congelamento_produto:-2.20,
@@ -739,7 +793,8 @@
 			calor_especifico_produto_congelado:0.450,
 			calor_latente_congelamento:66,
 			calor_de_respiracao:0
-		},{
+		},
+		89:{
 			nome:"morango",
 			densidade_de_armazenagem:250,
 			temperatura_congelamento_produto:-0.60,
@@ -747,7 +802,8 @@
 			calor_especifico_produto_congelado:0.470,
 			calor_latente_congelamento:72,
 			calor_de_respiracao:990
-		},{
+		},
+		90:{
 			nome:"nabo",
 			densidade_de_armazenagem:350,
 			temperatura_congelamento_produto:-1.10,
@@ -755,7 +811,8 @@
 			calor_especifico_produto_congelado:0.480,
 			calor_latente_congelamento:74,
 			calor_de_respiracao:480
-		},{
+		},
+		91:{
 			nome:"nata",
 			densidade_de_armazenagem:600,
 			temperatura_congelamento_produto:-0.60,
@@ -763,7 +820,8 @@
 			calor_especifico_produto_congelado:0.390,
 			calor_latente_congelamento:52,
 			calor_de_respiracao:0
-		},{
+		},
+		92:{
 			nome:"nectarina",
 			densidade_de_armazenagem:350,
 			temperatura_congelamento_produto:-1.10,
@@ -771,7 +829,8 @@
 			calor_especifico_produto_congelado:0.470,
 			calor_latente_congelamento:71,
 			calor_de_respiracao:210
-		},{
+		},
+		93:{
 			nome:"nozes",
 			densidade_de_armazenagem:500,
 			temperatura_congelamento_produto:0.00,
@@ -779,7 +838,8 @@
 			calor_especifico_produto_congelado:0.220,
 			calor_latente_congelamento:4,
 			calor_de_respiracao:0
-		},{
+		},
+		94:{
 			nome:"oleo_vegetal",
 			densidade_de_armazenagem:300,
 			temperatura_congelamento_produto:-3.60,
@@ -787,7 +847,8 @@
 			calor_especifico_produto_congelado:0.250,
 			calor_latente_congelamento:12,
 			calor_de_respiracao:0
-		},{
+		},
+		95:{
 			nome:"ostra",
 			densidade_de_armazenagem:400,
 			temperatura_congelamento_produto:-2.80,
@@ -795,7 +856,8 @@
 			calor_especifico_produto_congelado:0.440,
 			calor_latente_congelamento:64,
 			calor_de_respiracao:0
-		},{
+		},
+		96:{
 			nome:"ovo_casca",
 			densidade_de_armazenagem:500,
 			temperatura_congelamento_produto:-2.20,
@@ -803,7 +865,8 @@
 			calor_especifico_produto_congelado:0.400,
 			calor_latente_congelamento:54,
 			calor_de_respiracao:0
-		},{
+		},
+		97:{
 			nome:"ovo_liquido",
 			densidade_de_armazenagem:500,
 			temperatura_congelamento_produto:-2.20,
@@ -811,7 +874,8 @@
 			calor_especifico_produto_congelado:0.420,
 			calor_latente_congelamento:59,
 			calor_de_respiracao:0
-		},{
+		},
+		98:{
 			nome:"ovo_resfriado",
 			densidade_de_armazenagem:500,
 			temperatura_congelamento_produto:-2.20,
@@ -819,7 +883,8 @@
 			calor_especifico_produto_congelado:0.400,
 			calor_latente_congelamento:54,
 			calor_de_respiracao:0
-		},{
+		},
+		99:{
 			nome:"pao_assado",
 			densidade_de_armazenagem:300,
 			temperatura_congelamento_produto:-7.80,
@@ -827,7 +892,8 @@
 			calor_especifico_produto_congelado:0.340,
 			calor_latente_congelamento:50,
 			calor_de_respiracao:0
-		},{
+		},
+		100:{
 			nome:"pao_de_queijo",
 			densidade_de_armazenagem:450,
 			temperatura_congelamento_produto:-3.00,
@@ -835,7 +901,8 @@
 			calor_especifico_produto_congelado:0.340,
 			calor_latente_congelamento:50,
 			calor_de_respiracao:0
-		},{
+		},
+		101:{
 			nome:"pao_massa",
 			densidade_de_armazenagem:450,
 			temperatura_congelamento_produto:-2.00,
@@ -843,7 +910,8 @@
 			calor_especifico_produto_congelado:0.340,
 			calor_latente_congelamento:29,
 			calor_de_respiracao:0
-		},{
+		},
+		102:{
 			nome:"peixe_defumado",
 			densidade_de_armazenagem:450,
 			temperatura_congelamento_produto:0.00,
@@ -851,7 +919,8 @@
 			calor_especifico_produto_congelado:0.390,
 			calor_latente_congelamento:52,
 			calor_de_respiracao:0
-		},{
+		},
+		103:{
 			nome:"peixe_fresco",
 			densidade_de_armazenagem:350,
 			temperatura_congelamento_produto:-2.20,
@@ -859,7 +928,8 @@
 			calor_especifico_produto_congelado:0.440,
 			calor_latente_congelamento:66,
 			calor_de_respiracao:0
-		},{
+		},
+		104:{
 			nome:"pepino",
 			densidade_de_armazenagem:350,
 			temperatura_congelamento_produto:-0.80,
@@ -867,7 +937,8 @@
 			calor_especifico_produto_congelado:0.490,
 			calor_latente_congelamento:76,
 			calor_de_respiracao:0
-		},{
+		},
+		105:{
 			nome:"pera",
 			densidade_de_armazenagem:350,
 			temperatura_congelamento_produto:-1.60,
@@ -875,7 +946,8 @@
 			calor_especifico_produto_congelado:0.450,
 			calor_latente_congelamento:67,
 			calor_de_respiracao:230
-		},{
+		},
+		106:{
 			nome:"peru_fresco",
 			densidade_de_armazenagem:400,
 			temperatura_congelamento_produto:-2.80,
@@ -883,7 +955,8 @@
 			calor_especifico_produto_congelado:0.390,
 			calor_latente_congelamento:52,
 			calor_de_respiracao:0
-		},{
+		},
+		107:{
 			nome:"pimenta_doce",
 			densidade_de_armazenagem:250,
 			temperatura_congelamento_produto:-0.70,
@@ -891,7 +964,8 @@
 			calor_especifico_produto_congelado:0.470,
 			calor_latente_congelamento:73,
 			calor_de_respiracao:1190
-		},{
+		},
+		108:{
 			nome:"pimenta_malagueta",
 			densidade_de_armazenagem:250,
 			temperatura_congelamento_produto:-0.40,
@@ -899,7 +973,8 @@
 			calor_especifico_produto_congelado:0.240,
 			calor_latente_congelamento:10,
 			calor_de_respiracao:1190
-		},{
+		},
+		109:{
 			nome:"pimenta_seca",
 			densidade_de_armazenagem:250,
 			temperatura_congelamento_produto:0.00,
@@ -907,7 +982,8 @@
 			calor_especifico_produto_congelado:0.240,
 			calor_latente_congelamento:10,
 			calor_de_respiracao:0
-		},{
+		},
+		110:{
 			nome:"pimentao",
 			densidade_de_armazenagem:250,
 			temperatura_congelamento_produto:-0.70,
@@ -915,7 +991,8 @@
 			calor_especifico_produto_congelado:0.470,
 			calor_latente_congelamento:74,
 			calor_de_respiracao:1190
-		},{
+		},
+		111:{
 			nome:"polpa_de_fruta",
 			densidade_de_armazenagem:420,
 			temperatura_congelamento_produto:-1.10,
@@ -923,7 +1000,8 @@
 			calor_especifico_produto_congelado:0.480,
 			calor_latente_congelamento:72,
 			calor_de_respiracao:0
-		},{
+		},
+		112:{
 			nome:"presunto_pernil_defumado",
 			densidade_de_armazenagem:350,
 			temperatura_congelamento_produto:0.00,
@@ -931,7 +1009,8 @@
 			calor_especifico_produto_congelado:0.330,
 			calor_latente_congelamento:33,
 			calor_de_respiracao:0
-		},{
+		},
+		113:{
 			nome:"presunto_pernil_fresco",
 			densidade_de_armazenagem:350,
 			temperatura_congelamento_produto:-1.80,
@@ -939,7 +1018,8 @@
 			calor_especifico_produto_congelado:0.370,
 			calor_latente_congelamento:45,
 			calor_de_respiracao:0
-		},{
+		},
+		114:{
 			nome:"queijo_processado",
 			densidade_de_armazenagem:450,
 			temperatura_congelamento_produto:-7.20,
@@ -947,7 +1027,8 @@
 			calor_especifico_produto_congelado:0.310,
 			calor_latente_congelamento:32,
 			calor_de_respiracao:0
-		},{
+		},
+		115:{
 			nome:"quiabo",
 			densidade_de_armazenagem:400,
 			temperatura_congelamento_produto:-1.70,
@@ -955,7 +1036,8 @@
 			calor_especifico_produto_congelado:0.480,
 			calor_latente_congelamento:73,
 			calor_de_respiracao:5220
-		},{
+		},
+		116:{
 			nome:"rabanete",
 			densidade_de_armazenagem:300,
 			temperatura_congelamento_produto:-0.80,
@@ -963,7 +1045,8 @@
 			calor_especifico_produto_congelado:0.480,
 			calor_latente_congelamento:76,
 			calor_de_respiracao:960
-		},{
+		},
+		117:{
 			nome:"rabanete_picante",
 			densidade_de_armazenagem:300,
 			temperatura_congelamento_produto:-1.80,
@@ -971,7 +1054,8 @@
 			calor_especifico_produto_congelado:0.420,
 			calor_latente_congelamento:58,
 			calor_de_respiracao:0
-		},{
+		},
+		118:{
 			nome:"resfriados",
 			densidade_de_armazenagem:450,
 			temperatura_congelamento_produto:-2.00,
@@ -979,7 +1063,8 @@
 			calor_especifico_produto_congelado:0.410,
 			calor_latente_congelamento:55,
 			calor_de_respiracao:0
-		},{
+		},
+		119:{
 			nome:"roma",
 			densidade_de_armazenagem:400,
 			temperatura_congelamento_produto:-2.80,
@@ -987,7 +1072,8 @@
 			calor_especifico_produto_congelado:0.450,
 			calor_latente_congelamento:66,
 			calor_de_respiracao:0
-		},{
+		},
+		120:{
 			nome:"salsicharia",
 			densidade_de_armazenagem:280,
 			temperatura_congelamento_produto:-3.90,
@@ -995,7 +1081,8 @@
 			calor_especifico_produto_congelado:0.560,
 			calor_latente_congelamento:48,
 			calor_de_respiracao:0
-		},{
+		},
+		121:{
 			nome:"salsinha",
 			densidade_de_armazenagem:150,
 			temperatura_congelamento_produto:-1.10,
@@ -1003,7 +1090,8 @@
 			calor_especifico_produto_congelado:0.460,
 			calor_latente_congelamento:68,
 			calor_de_respiracao:0
-		},{
+		},
+		122:{
 			nome:"sangue",
 			densidade_de_armazenagem:300,
 			temperatura_congelamento_produto:-1.10,
@@ -1011,7 +1099,8 @@
 			calor_especifico_produto_congelado:0.450,
 			calor_latente_congelamento:62,
 			calor_de_respiracao:0
-		},{
+		},
+		123:{
 			nome:"sorvete_massa",
 			densidade_de_armazenagem:400,
 			temperatura_congelamento_produto:-6.00,
@@ -1019,7 +1108,8 @@
 			calor_especifico_produto_congelado:0.390,
 			calor_latente_congelamento:49,
 			calor_de_respiracao:0
-		},{
+		},
+		124:{
 			nome:"suco_de_laranja_fresco",
 			densidade_de_armazenagem:300,
 			temperatura_congelamento_produto:0.00,
@@ -1027,7 +1117,8 @@
 			calor_especifico_produto_congelado:0.470,
 			calor_latente_congelamento:72,
 			calor_de_respiracao:0
-		},{
+		},
+		125:{
 			nome:"tamara_seca",
 			densidade_de_armazenagem:400,
 			temperatura_congelamento_produto:-15.70,
@@ -1035,7 +1126,8 @@
 			calor_especifico_produto_congelado:0.260,
 			calor_latente_congelamento:17,
 			calor_de_respiracao:0
-		},{
+		},
+		126:{
 			nome:"tangerina",
 			densidade_de_armazenagem:400,
 			temperatura_congelamento_produto:-1.10,
@@ -1043,7 +1135,8 @@
 			calor_especifico_produto_congelado:0.460,
 			calor_latente_congelamento:70,
 			calor_de_respiracao:0
-		},{
+		},
+		127:{
 			nome:"tomate_verde",
 			densidade_de_armazenagem:450,
 			temperatura_congelamento_produto:-0.60,
@@ -1051,7 +1144,8 @@
 			calor_especifico_produto_congelado:0.480,
 			calor_latente_congelamento:75,
 			calor_de_respiracao:1060
-		},{
+		},
+		128:{
 			nome:"tomate_vermelho",
 			densidade_de_armazenagem:450,
 			temperatura_congelamento_produto:-0.50,
@@ -1059,7 +1153,8 @@
 			calor_especifico_produto_congelado:0.480,
 			calor_latente_congelamento:75,
 			calor_de_respiracao:540
-		},{
+		},
+		129:{
 			nome:"toranja_pomelo",
 			densidade_de_armazenagem:400,
 			temperatura_congelamento_produto:-1.10,
@@ -1067,7 +1162,8 @@
 			calor_especifico_produto_congelado:0.460,
 			calor_latente_congelamento:71,
 			calor_de_respiracao:660
-		},{
+		},
+		130:{
 			nome:"uva_seca",
 			densidade_de_armazenagem:600,
 			temperatura_congelamento_produto:0.00,
@@ -1075,7 +1171,8 @@
 			calor_especifico_produto_congelado:0.280,
 			calor_latente_congelamento:15,
 			calor_de_respiracao:0
-		},{
+		},
+		131:{
 			nome:"uva_americana",
 			densidade_de_armazenagem:500,
 			temperatura_congelamento_produto:-1.70,
@@ -1083,7 +1180,8 @@
 			calor_especifico_produto_congelado:0.450,
 			calor_latente_congelamento:66,
 			calor_de_respiracao:152
-		},{
+		},
+		132:{
 			nome:"uva_europeia",
 			densidade_de_armazenagem:500,
 			temperatura_congelamento_produto:-1.90,
@@ -1091,7 +1189,8 @@
 			calor_especifico_produto_congelado:0.440,
 			calor_latente_congelamento:65,
 			calor_de_respiracao:130
-		},{
+		},
+		133:{
 			nome:"vacina",
 			densidade_de_armazenagem:200,
 			temperatura_congelamento_produto:-0.10,
@@ -1099,7 +1198,8 @@
 			calor_especifico_produto_congelado:0.480,
 			calor_latente_congelamento:78,
 			calor_de_respiracao:0
-		},{
+		},
+		134:{
 			nome:"vagem",
 			densidade_de_armazenagem:350,
 			temperatura_congelamento_produto:-0.60,
@@ -1107,7 +1207,8 @@
 			calor_especifico_produto_congelado:0.470,
 			calor_latente_congelamento:72,
 			calor_de_respiracao:4310
-		},{
+		},
+		135:{
 			nome:"verduras",
 			densidade_de_armazenagem:350,
 			temperatura_congelamento_produto:-1.10,
@@ -1115,7 +1216,8 @@
 			calor_especifico_produto_congelado:0.480,
 			calor_latente_congelamento:72,
 			calor_de_respiracao:500
-		},{
+		},
+		136:{
 			nome:"vinho",
 			densidade_de_armazenagem:0,
 			temperatura_congelamento_produto:-2.20,
@@ -1123,7 +1225,8 @@
 			calor_especifico_produto_congelado:0.470,
 			calor_latente_congelamento:72,
 			calor_de_respiracao:0
-		},{
+		},
+		137:{
 			nome:"vitela_fresca",
 			densidade_de_armazenagem:300,
 			temperatura_congelamento_produto:-1.70,
@@ -1132,6 +1235,37 @@
 			calor_latente_congelamento:53,
 			calor_de_respiracao:0
 		}
-	]
 }
 
+function pegaParametros2(){
+	produto = $("[name='selectProdutos']").val();
+	massaTotalArmazenada = $("[name='tx_MassaTotalArma']").val();
+	massaProdutoMovimento = $("[name='tx_MassaProdMov']").val();
+	tempoCongelamentoProduto = $("[name='tx_TempResfCongProd']").val();
+	temperaturaEntrada = $("[name='tx_TempEntrada']").val();
+}
+
+function armazenaDados2(){
+	localStorage.setItem("cargaTermicaProduto",cargaTermicaProduto);
+}
+
+function calcular2(){
+
+	pegaParametros2();
+
+	var valorProduto = 0;
+
+	for (let i = 1 ; i <= 137 ; i++ ){
+		if (produto == i){
+			valorProduto = i;
+		}
+	}
+
+	valorProduto.toString();
+
+	cargaTermicaProduto = massaProdutoMovimento * (temperaturaEntrada - localStorage.getItem("tempInterna")) * listaProdutos[valorProduto]['calor_especifico_produto_congelado'];
+	console.log(cargaTermicaProduto);
+	
+
+	armazenaDados2();
+}

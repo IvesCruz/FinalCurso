@@ -22,7 +22,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+    <script type="text/javascript" src="./js/indexSegundaPagina.js"></script>
     <link type="text/css" rel="stylesheet" href="css/index.css"/>
     <title>CálculoDeCargaTérmica</title>
 </head>
@@ -35,7 +35,7 @@
                 <h5> Características do produto a ser armazenado </h5>
                 <form class="col s12" name="dados" action="terceira.html" onSubmit="return validacao();">
                     <div class="input-field col s12">
-                        <select id="selectProdutos">
+                        <select id="selectProdutos" name="selectProdutos">
                             <option value="" disabled selected>Produto</option>
                             <option value="1">Outros</option>
                             <option value="2">Abacate</option>
@@ -240,7 +240,7 @@
 --> 
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="MassaTotalArma" name="tx_MassaTotalArma" type="number" class="validate">
+                            <input id="MassaTotalArma" name="tx_MassaTotalArma" type="number" class="validate" onchange="calcular2();">
                             <label for="MassaTotalArma">Massa Total de Produto Armazenado</label>
                         </div>
                     </div>
@@ -271,7 +271,7 @@
                     </div>
 
                     <div class="input-field col sm 12">
-                        <button type="submit" class="waves-effect waves-light btn">AVANÇAR</button>
+                        <button type="submit" class="waves-effect waves-light btn" onclick="calcular2();">AVANÇAR</button>
                     </div>
                 </form>   
             </div>
