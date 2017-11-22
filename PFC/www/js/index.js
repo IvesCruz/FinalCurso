@@ -63,7 +63,10 @@ function pegaParametros(){
 function armazenaDados(){
     localStorage.setItem("tempInterna",tempInterna);
     localStorage.setItem("totalPrimeira",totalPrimeira);
+    localStorage.setItem("infiltracao",infiltracao);
     localStorage.setItem("cargaTermicaDiaria",cargaTermicaDiaria);
+    localStorage.setItem("largura",largura);
+    localStorage.setItem("comprimento",comprimento);
 }
 
 function calcular(){
@@ -377,7 +380,7 @@ function calcular(){
         }
     }
 
-    var infiltracao = largura * comprimento * altura * trocasDeAr * calorNecessario;
+    infiltracao = largura * comprimento * altura * trocasDeAr * calorNecessario;
     
     console.log(infiltracao);
     console.log(totalPrimeira);
