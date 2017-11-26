@@ -1,9 +1,6 @@
-console.log("Entrou coroi");
 
 window.onload = function(){
-	console.log("Entrou na função onload");
 	valor1 = localStorage.getItem("totalDiaria");
-	console.log(valor1);
 	valor1.toString();
 
  	document.getElementById('1').innerHTML = valor1;

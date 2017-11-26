@@ -48,15 +48,26 @@ function calcularTotal(){
 	var segunda = localStorage.getItem("infiltracao");
 	console.log(segunda);
 	var terceira = localStorage.getItem("cargaTermicaProduto");
-	parseFloat(terceira);
 	console.log(terceira);
+
+
+	primeira = parseFloat(primeira);
+	segunda = parseFloat(segunda);
+	terceira = parseFloat(terceira);
+
 
 	totalDiaria = primeira + segunda + terceira + calorOcupacao + iluminacao;
 	totalDiariaParcial = totalDiaria/16;
-	console.log(fatorSeguranca);
 	seguranca = (fatorSeguranca/100.0) * totalDiariaParcial;
-	console.log(seguranca);
+	
+	
 	totalFinal = totalDiariaParcial + seguranca ;
+	
+	//Arredondar em 2 casas decimais.
+	totalDiaria = totalDiaria.toFixed(2);
+	totalDiariaParcial = totalDiariaParcial.toFixed(2);
+	seguranca = seguranca.toFixed(2);
+	totalFinal =  totalFinal.toFixed(2);
 
 	console.log(totalDiaria);
 	console.log(totalDiariaParcial);
