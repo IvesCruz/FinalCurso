@@ -17,7 +17,7 @@
         "require": {
             "php": ">=5.3.0"
         },
-        "time": "2016-10-10 12:19:37",
+        "time": "2016-10-10T12:19:37+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -73,7 +73,7 @@
         "require-dev": {
             "symfony/http-kernel": "~2.8|~3.0"
         },
-        "time": "2017-11-10 16:38:39",
+        "time": "2017-11-10T16:38:39+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -127,7 +127,7 @@
         "suggest": {
             "ext-mbstring": "For best performance"
         },
-        "time": "2017-10-11 12:05:26",
+        "time": "2017-10-11T12:05:26+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -204,7 +204,7 @@
             "symfony/filesystem": "",
             "symfony/process": ""
         },
-        "time": "2017-11-16 15:24:32",
+        "time": "2017-11-16T15:24:32+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -267,7 +267,7 @@
         "suggest": {
             "alcaeus/mongo-php-adapter": "Required to use legacy MongoDB driver"
         },
-        "time": "2017-08-25 07:02:50",
+        "time": "2017-08-25T07:02:50+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -331,7 +331,7 @@
         "require": {
             "php": ">=5.3.2"
         },
-        "time": "2014-09-09 13:34:57",
+        "time": "2014-09-09T13:34:57+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -390,7 +390,7 @@
         "require-dev": {
             "phpunit/phpunit": "^6.2"
         },
-        "time": "2017-07-22 12:18:28",
+        "time": "2017-07-22T12:18:28+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -460,7 +460,7 @@
             "doctrine/coding-standard": "~0.1@dev",
             "phpunit/phpunit": "^5.7"
         },
-        "time": "2017-07-22 10:37:32",
+        "time": "2017-07-22T10:37:32+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -530,7 +530,7 @@
             "doctrine/cache": "1.*",
             "phpunit/phpunit": "^5.7"
         },
-        "time": "2017-07-22 10:58:02",
+        "time": "2017-07-22T10:58:02+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -595,7 +595,7 @@
         "require": {
             "php": ">=5.3.0"
         },
-        "time": "2017-02-14 16:28:37",
+        "time": "2017-02-14T16:28:37+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -646,7 +646,7 @@
         "require": {
             "psr/container": "^1.0"
         },
-        "time": "2017-02-14 19:40:03",
+        "time": "2017-02-14T19:40:03+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -679,7 +679,7 @@
         "require": {
             "php": ">=5.4.0"
         },
-        "time": "2017-01-19 11:35:12",
+        "time": "2017-01-19T11:35:12+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -724,7 +724,7 @@
         "require": {
             "php": ">=5.3.0"
         },
-        "time": "2016-08-06 14:39:51",
+        "time": "2016-08-06T14:39:51+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -780,7 +780,7 @@
         "require-dev": {
             "symfony/phpunit-bridge": "^3.2"
         },
-        "time": "2017-07-23 07:32:15",
+        "time": "2017-07-23T07:32:15+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -840,7 +840,7 @@
             "phpunit/phpunit": "^4.0",
             "squizlabs/php_codesniffer": "^2.5"
         },
-        "time": "2017-11-04 08:46:46",
+        "time": "2017-11-04T08:46:46+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -909,7 +909,7 @@
         "require-dev": {
             "phpunit/phpunit": "^5.7"
         },
-        "time": "2017-08-31 08:43:38",
+        "time": "2017-08-31T08:43:38+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -983,7 +983,7 @@
             "phpunit/phpunit": "^6.2.3",
             "squizlabs/php_codesniffer": "^3.0.2"
         },
-        "time": "2017-07-22 11:58:36",
+        "time": "2017-07-22T11:58:36+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1042,7 +1042,7 @@
         "suggest": {
             "symfony/console": "For helpful console commands such as SQL execution and import of files."
         },
-        "time": "2017-11-19 13:38:54",
+        "time": "2017-11-19T13:38:54+00:00",
         "bin": [
             "bin/doctrine-dbal"
         ],
@@ -1121,7 +1121,7 @@
         "suggest": {
             "symfony/yaml": "If you want to use YAML Metadata Mapping Driver"
         },
-        "time": "2017-10-23 18:21:04",
+        "time": "2017-10-23T18:21:04+00:00",
         "bin": [
             "bin/doctrine",
             "bin/doctrine.php"

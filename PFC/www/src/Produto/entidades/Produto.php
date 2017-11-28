@@ -1,14 +1,48 @@
 <?php
 namespace Produto\entidades;
 
+/**
+ * @Entity
+ * @Table(name="produto")
+ */
+
 class Produto{
     
+    /**
+     * @var integer @Id
+     *   @Column(name="id", type="integer")
+     *   @GeneratedValue(strategy="AUTO")
+    */
     private $id;
+    /**
+     *
+     * @var string @Column(type="string", length=255)
+    */
     private $linha;
+    /**
+     *
+     * @var string @Column(type="string", length=255)
+    */
     private $modelo;
+    /**
+     *
+     * @var string @Column(type="string", length=255)
+    */
     private $temp_condesacao;
+    /**
+     *
+     * @var string @Column(type="string", length=255)
+    */
     private $temp_evaporacao;
+    /**
+     *
+     * @var string @Column(type="string", length=255)
+    */
     private $capa_nominal;
+    /**
+     *
+     * @var string @Column(type="string", length=255)
+    */
     private $pot_compressor;
     
     public function __construct($id = 0,$linha= "" ,$modelo= "" ,$temp_condesacao= "" ,$temp_evaporacao= "" ,$capa_nominal= "" ,$pot_compressor= "" ){
