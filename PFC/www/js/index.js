@@ -1,4 +1,5 @@
 window.onload = function(){
+
     data = new Date();
     mes = data.getMonth();
     dia = data.getDate();
@@ -403,5 +404,6 @@ function calcular(){
     //fatorTabela1 = altura * largura * 
 
     armazenaDados();
-
+    
 }
+
